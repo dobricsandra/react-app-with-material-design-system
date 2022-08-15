@@ -21,3 +21,7 @@ export const routes: Route[] = [
   { key: "contact", path: routeKeyPathMapper.contact, page: ContactPage },
   { key: "login", path: routeKeyPathMapper.login, page: LoginPage },
 ];
+
+// for a given key, return the path
+export const getRoutePathFromKey = (key: string) =>
+  routes.find((route) => route.key === key)?.path;
